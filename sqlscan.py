@@ -18,8 +18,9 @@ try:
         os.system("sudo apt install git")
         os.system("git clone https://github.com/WWW313NET/sqlscan")
         os.chdir("sqlscan")
+        exit()
 
-    elif(sql == 2):
+    if(sql == 2):
         print("e-commerce-1")
         print("news-2")
         print("blog-3")
