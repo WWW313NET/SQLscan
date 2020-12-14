@@ -5,7 +5,7 @@ print(" ___  ___  _     ___  ___    _")
 print("|_ -||  .|| |   |_ -|| __|  / \  |\  |")
 print("|___||_  || |_  |___|||__  /___\ | \ |  ")
 print("       |_||___|      |___| |   | |  \|")
-print("Version 3.0")
+print("Version 4")
 print("enter a number")
 print("1 >> update a sqlscan")
 print("2 >> finds sites vulnerable to SQL injection")
@@ -16,7 +16,7 @@ try:
         os.chdir("..")
         os.system("sudo rm -r sqlscan")
         os.system("sudo apt install git")
-        git clone https://github.com/WWW313NET/sqlscan
+        os.system("git clone https://github.com/WWW313NET/sqlscan")
         os.chdir("sqlscan")
 
     elif(sql == 2):
