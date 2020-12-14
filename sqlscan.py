@@ -14,8 +14,8 @@ try:
     sql = int(input("number: "))
     if(sql == 1):
         os.chdir("..")
-        sudo rm -r sqlscan
-        sudo apt install git
+        os.system("sudo rm -r sqlscan")
+        os.system("sudo apt install git")
         git clone https://github.com/WWW313NET/sqlscan
         os.chdir("sqlscan")
 
